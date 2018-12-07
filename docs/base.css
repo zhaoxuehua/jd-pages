@@ -1,0 +1,452 @@
+/*css京东 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+/* 或用这段清除浮动
+.clearfix:after {
+    content:".";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility: hidden;
+    clear: both;
+} */
+.clearfix {
+    zoom:1;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+.col-red {
+    /* 因为a标签里的免费注册始终是红色的，所以需要单独设，并且权限要高，否则无法实现 */
+color: #C81623 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/* site-nav 部分 start */
+.site-nav {
+    height:30px;
+    line-height:30px;
+    background-color: #f1f1f1;
+}
+.w {
+    width: 1210px;
+    margin: 0 auto;
+    /* overflow: hidden; 给父元素设，可以清除浮动，但如果有内容溢出，就会裁剪，不适合用*/ 
+}
+.fl {
+    float:left;
+}
+.fr {
+   float:right;
+}
+.site-nav-send,
+.site-nav-r .fore {
+    padding: 0 25px 0 10px;
+    position:relative;    
+}
+.site-nav-send:hover {
+ background-color:#fff;
+}
+
+ /* 实现向下小三角代码 */
+.site-nav-send i,
+.fore i{
+    position:absolute;
+    top:12px;
+    right:8px;
+    width:15px;
+    height:7px;
+    font:400 13px/15px "consolas";
+    /* background-color:red; 为了看到盒子设置的*/
+    overflow:hidden;
+}
+.site-nav-send s,
+.fore s {
+    position:absolute;
+    top:-7px;
+}
+/* 实现向下小三角代码 end */
+
+.site-nav-r li {
+    padding:0 10px;
+    float:left;
+}
+/* 为了使设置的值有效，多写类名增加权限 */
+.site-nav-r .line {
+    width:1px;
+    height:12px;
+    background-color:#dddddd;
+    margin-top:9px;
+     padding:0;/*为了覆盖上面的padding10.否则就是11，竖线宽度实际就是11px */
+}
+.site-nav-r .jd-tel {
+    padding-left:25px;
+
+}
+.jd-tel span {
+    /* 行内元素不可以直接设置宽高 有了absolute就可以设了，或者转为行内块 */  
+    position:absolute;
+    width:25px;
+    height:20px;
+    top:5px;
+    left:6px;
+    background:url("image/tel.png") no-repeat ; 
+}
+/* site-nav end */
+
+
+/* top-banner部分 start */
+.topbanner{
+    background-color:#37c2fb;
+}
+.tb {
+    position: relative;
+}
+.close-banner {
+    position: absolute;
+    top:5px;
+    right:0px;
+    width:19px;
+    height:19px;
+    background:url("image/close-banner.png") no-repeat;
+}
+.close-banner:hover{
+    /* 写鼠标放上去显示它下方的精灵图 */
+   background:url("image/close-banner.png") no-repeat bottom;   /* 其实直接写bottom就可以 */
+}
+/* top-banner部分 end */
+
+
+/* search 部分start */
+.search-logo {
+   width: 362px;    /* 用的是宽剩余法，下面的logo占据不了就剩余出空白 */
+    height:60px;
+    padding:20px 0;  
+    float:left;
+    /* background-color:pink;为了方便看位置*/
+} 
+.search-logo a{
+    display:inline-block;
+    width:270px;
+    height:60px;
+    text-indent:-999em;
+    /* padding:20px 0; 实现不了图片居中，可以给上面的父盒子设置padding值，但高度需减去padding，整体高度其实没变*/
+    background:url("image/logo.png") no-repeat;   
+}
+.search-input {
+    height:36px;          /*父盒子给高度保证里面的两个input设置宽高时掉不下来 */
+    padding-top:25px;    /* 給了padding对应高度就得跟着变，整体高度还和原来保持一致 */
+    float:left;
+}
+.search-input input {
+    float:left;
+    width:450px;
+    padding-left:4px;
+    height:32px;
+    color:rgb(153,153,153);
+    font: 400 14px/32px "microsoft yahei";
+    border: 2px solid #b61d1d;
+    border-right:0;     /*右边框可以和后面的搜索一起做 */
+}
+.search-input button {
+    width:82px;
+    height:36px;
+    float:left;
+    background-color:#b61d1d;
+    color:#fff;
+    font:400 16px/36px "microsoft yahei";
+    cursor:pointer;   /* 鼠标变成小手 */
+}
+.search-car {
+    width: 96px;
+    height:34px;
+    line-height:34px;
+    padding-left:43px;   /* 因为我的购物车不是居中，在宽度减去padding即可 */
+    position: relative;
+    margin:25px 65px 0 0;
+    float:right;
+    border:1px solid #dfdfdf;
+    background-color:#f9f9f9;
+}
+.icon1 {
+    /* 写精灵图 子绝父相 */
+    position: absolute;
+    top:9px;
+    left:18px;
+    width:18px;
+    height:16px;
+    background:url("image/tel.png") no-repeat 0 -58px;
+}
+.icon2 {
+    position: absolute;
+    right:10px;
+    top:0;
+    color:#999;
+    font-family:"simsun";   
+}
+.icon3 {
+    position: absolute;
+    top:-5px;
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    background-color: #c81623;
+    color:#fff;
+    text-align: center;
+    border-radius: 7px 7px 7px 7px;
+}
+.secrch-mareAlink {
+    width: 530px;
+    height:28px;
+    line-height: 28px;
+    float:left;
+    /* background-color:yellow; */
+}
+.secrch-mareAlink a {
+    margin-right:8px;
+    font-family: "microsoft yahei";
+}
+/* search 部分 end  */
+
+
+/* footer 部分 start */
+.footer-top-slogen {
+    height:94px;
+    margin-bottom: 16px;
+    background-color:#f5f5f5;
+    position: relative;
+}
+
+.footer-top-slogen-icon {
+    position: absolute;
+    left:50%;
+    top:20px;
+}
+.footer-top-slogen-icon1 {
+    margin-left:-604px;
+}
+.footer-top-slogen-icon2{
+    margin-left:-302px;
+}
+.footer-top-slogen-icon4{
+    margin-left:302px;
+}
+.footer-top-shopping dl{
+    float:left;
+    width:200px;
+}
+.footer-top-shopping .last-dl {
+    width:100px;
+}
+.footer-top-shopping dt{
+    height:34px;
+    line-height:34px;
+    font:400 16px/34px "microsoft yahei";
+}
+.footer-top-shopping dd{
+    line-height: 20px;
+}
+
+.coverage {
+    width:186px;
+    height:169px;
+    float: right;
+    padding-left:17px;
+    margin-right:60px;
+    background:url("image/china.png") no-repeat left bottom;
+}
+.coverage h3 {
+    height:34px;
+    line-height:34px;
+    font:400 16px/34px "microsoft yahei";     
+}
+.coverage p {
+padding-top:2px; 
+}
+.coverage a {
+float: right;
+}
+.footer-bottom {
+    text-align:center; 
+    padding:20px 0 30px;
+    border-top:1px solid #e5e5e5;
+    margin-top:20px; 
+}
+.footer-bottom-links a {
+    margin:0 10px;
+}
+.footer-bottom-copyright {
+    padding:10px 0;
+}
+.footer-bottom-img a {
+    margin:0 5px;
+}
+/* footer 部分 end */
+
+
+/* shortcut nav部分 start */
+.shortcut-nav {
+    height:44px;
+    border-bottom: 2px solid #b1191a;
+}
+.shortcut-nav-menu {
+    width:210px;
+   height:44px; /* 浮动的盒子相互影响，不管是否在同一盒子中 */
+    float:left;
+    position: relative;
+     z-index: 1;  /*设置层叠顺序 */  
+}
+.shortcut-nav-menu-all  a {
+    display:inline-block;
+    width:190px;
+    height:44px;
+    padding:0 10px;  
+    background-color:#b1191a;
+    color:white;
+    font:400 15px/44px "microsoft yahei";
+}
+.shortcut-nav-menu-one {
+    /* width:210px; 有继承性*/
+    height:465px;
+    margin-top:2px;  /* 不要压住边框 */
+    background-color: #c81623;
+    border-left:1px solid #b1191a;
+    border-bottom:1px solid #b1191a;
+}
+.shortcut-nav-menu-one div {
+    height: 31px;
+    line-height:31px;
+    padding:0 10px;
+    color:#fff;
+    font:400 14px/31px "microsoft yahei";
+}
+.shortcut-nav-menu-one div:hover{
+    background-color:#fff;
+}
+.shortcut-nav-menu-one div:hover a{
+    color:#c81623;
+}
+.shortcut-nav-menu-one h3 {
+    float:left;
+}
+.shortcut-nav-menu-one h3 a {
+    color:#fff;
+}
+
+.shortcut-nav-menu-one i {
+    float: right;
+    font:400 9px/31px "consolas";
+}
+
+.shortcut-nav-items {
+    width:730px;
+    height:44px;
+    float:left;
+}
+.shortcut-nav-items li {
+    float: left;
+}
+.shortcut-nav-items a{
+    display:inline-block;
+    height:44px;
+    /* line-height:44px; 下边设置了*/
+    padding:0 20px; /* 不适合用宽来做，因为字数不同宽度不同，用内容撑开盒子padding比较合适 */
+    color:#333;
+    font:400 15px/44px "microsoft yahei";
+}
+.shortcut-nav-items a:hover{
+    color:#C81623;
+}
+.shortcut-nav-img {
+    width:200px;
+    height:44px;
+    float:right;
+    /* background-color: yellow; */
+    margin-top:-10px;
+    margin-right:50px;
+    /* 或者用定位移动图片
+    position: relative;
+    left:-50px;
+    top:-10px; */
+}
+/* shortcut nav部分 end */

@@ -1,0 +1,173 @@
+    /* main 部分 start */
+    .main-slide {
+        width: 735px;
+        height: 454px;
+        float:left;
+        margin:12px 0 0 220px;
+        position: relative;
+    }
+    .main-slide ul {
+        position: absolute;
+        bottom:10px;
+        left:50%;
+        margin-left:-66px;
+
+    }
+    .main-slide li {
+        float:left;
+        width: 18px;
+        height: 18px;
+        line-height:18px;
+        text-align:center;
+        border-radius: 9px;
+        margin:0 2px;
+        background-color: #3e3e3e;
+        color:#fff;
+        cursor: pointer;
+    }
+    .main-slide li:hover{
+        background-color:blue; /*应该用类来做，放到谁上谁显色，其他的都清零 */
+    }
+    .arrow a {
+        position: absolute;
+        top:50%;
+        margin-top:-31px; /* 给高的一半让居中 */
+        /* left:0; */
+        width: 28px;
+        height: 62px;
+        background-color:rgba(0,0,0,0.3);
+        color:#fff;
+        text-align:center;
+        font:400 22px/62px "simsun";
+    }
+    .arrow a:hover{
+       background-color:rgba(0,0,0,0.7);
+    }
+    .arrow .arrow-left {
+        left:0;
+        /* border-radius: 0 10px 10px 0;可以设置圆角，增强用户体验 */
+    }
+    .arrow .arrow-right {
+       right:5px; /* 如果上面给了left不起作用，因为在定位的情况下，left的权限高，在给了left值，right不会起作用 ,所以可以分开设，不要有覆盖*/
+    }  
+    .main-news {
+        height:466px; /*给高不容易出问题 */
+        float:right;
+     
+    }
+    .main-news-top {
+        width:248px;
+        height:372px;
+        border:1px solid #e4e4e4;
+        margin:12px 0 5px 0;
+        overflow: hidden;   /*为了切除下边money栏多余的部分 */
+    }
+    .main-news-top-faster {
+        height: 163px;
+        border-bottom: 1px dashed #e4e4e4;
+    }
+    .main-news-top-faster-title {
+        height: 32px;
+        line-height: 32px;
+        padding:0 15px;
+        border-bottom: 1px dotted #e8e8e7;
+    }
+    .main-news-top-faster-title h2 {
+        float:left;
+        font:400 16px/32px "microsoft yahei";
+
+    }
+    .main-news-top-faster-title a {
+        float:right;
+        font-family: "consolas";
+    }
+    .main-news-top-faster-content {
+        padding:5px 0 0 15px;
+    }
+    .main-news-top-faster-content li {
+        line-height: 24px;
+
+    }
+    .main-news-top-faster-content span {
+        font-weight: 700;
+        margin-right:5px;
+    }
+    .main-news-top-money ul {
+        /* 设置ul为了让四个li排在一排，只需要他的宽大于四个li,小于5个li */
+        width: 260px;
+       
+    }
+    .main-news-top-money li {
+        width: 62px;
+        height: 70px;
+        float:left;
+        margin-left:-1px;
+        margin-top:-1px;
+        border:1px solid #e8e8e7;
+    }
+    .main-news-top-money a{
+        /* 因为a里面包含图片和文字，li也是只包含图片和文字，所以宽高是一样的 */
+        display:block;
+        width: 62px;
+        height: 30px;
+        padding-top:40px;
+        text-align: center;
+        line-height:30px;
+        position: relative;
+    }
+    .main-news-top-money i {
+        position: absolute;
+        top:13px;
+        left:18px;
+        width: 25px;
+        height: 25px;
+        background:url("image/fly.png") no-repeat; 
+    }
+    .main-news-top-money  .main-news-top-money-icon2 {
+         /* 权限问题，上边已经给所有的i设置过了 只改坐标，显示不同的精灵图 */
+       background-position: 0 -25px;
+    }
+    .main-news-top-money  .main-news-top-money-icon3 {
+    background-position: 0 -50px;
+    }
+    .main-news-top-money  .main-news-top-money-icon4 {
+    background-position: 0 -75px;
+    }
+    .main-news-top-money  .main-news-top-money-icon5 {
+        background-position: 0 -100px; 
+
+    }
+    .main-news-top-money  .main-news-top-money-icon6 {
+        background-position: 0 -125px;
+    }
+    .main-news-top-money  .main-news-top-money-icon7 {
+        background-position: 0 -150px;
+    }
+    .main-news-top-money  .main-news-top-money-icon8 {
+        background-position: 0 -175px;
+    }
+    .main-news-top-money  .main-news-top-money-icon9 {
+        background-position: 0 -200px;
+    }
+    .main-news-top-money  .main-news-top-money-icon10 {
+        background-position: 0 -225px;
+    }
+    .main-news-top-money  .main-news-top-money-icon11 {
+        background-position: 0 -250px;
+    }
+    .main-news-top-money  .main-news-top-money-icon12 {
+        background-position: 0 -275px;
+    }
+     /* main 部分  end */
+
+
+     
+
+
+
+
+
+
+
+
+      
